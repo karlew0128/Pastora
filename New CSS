@@ -1,0 +1,1027 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #070707;
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+header {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 82px;
+
+    padding: 0 6%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(5, 5, 5, 0.78);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    z-index: 1000;
+}
+
+
+.logo {
+    color: #f4eee3;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    white-space: nowrap;
+}
+
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 34px;
+}
+
+nav a {
+    color: #e7dfd1;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+.hero {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding-top: 82px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at center top,
+            #222a38 0%,
+            #101722 40%,
+            #050608 100%
+        );
+}
+
+
+.room-bg {
+    position: absolute;
+
+    inset: 82px 0 0 0;
+
+    overflow: hidden;
+
+    perspective: 1200px;
+
+    z-index: 1;
+}
+
+
+.back-wall {
+    position: absolute;
+
+    width: 70%;
+    height: 70%;
+
+    left: 25%;
+    top: 7%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #e9e2d5 0%,
+            #cfc5b4 55%,
+            #b5a996 100%
+        );
+
+    box-shadow:
+        inset 0 0 100px rgba(0,0,0,0.25);
+
+    transform:
+        perspective(1000px)
+        translateZ(-250px);
+
+    opacity: 0.72;
+}
+
+
+.left-wall {
+    position: absolute;
+
+    width: 45%;
+    height: 70%;
+
+    left: -13%;
+    top: 7%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #766d60,
+            #c0b5a3
+        );
+
+    transform:
+        perspective(1000px)
+        rotateY(55deg)
+        translateZ(-100px);
+
+    opacity: 0.45;
+}
+
+
+.right-wall {
+    position: absolute;
+
+    width: 45%;
+    height: 70%;
+
+    right: -13%;
+    top: 7%;
+
+    background:
+        linear-gradient(
+            -90deg,
+            #665e54,
+            #bdb2a1
+        );
+
+    transform:
+        perspective(1000px)
+        rotateY(-55deg)
+        translateZ(-100px);
+
+    opacity: 0.45;
+}
+
+
+.floor {
+    position: absolute;
+
+    width: 140%;
+    height: 50%;
+
+    left: -20%;
+    bottom: -28%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #9d8c76,
+            #625545
+        );
+
+    transform:
+        perspective(900px)
+        rotateX(68deg);
+
+    box-shadow:
+        0 -30px 70px rgba(0,0,0,0.6);
+}
+
+
+.intro {
+    position: relative;
+
+    z-index: 20;
+
+    width: 430px;
+    max-width: 90%;
+
+    margin-left: 7%;
+
+    padding: 45px 40px;
+
+    background:
+        rgba(5, 5, 7, 0.94);
+
+    border-left: 3px solid #d5c09a;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.65);
+
+    animation: introAppear 1s ease;
+}
+
+
+@keyframes introAppear {
+
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+.small-title {
+    display: block;
+
+    color: #e1c98f;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+}
+
+
+.intro h1 {
+    color: #ffffff;
+
+    font-family: Georgia, serif;
+
+    font-size: 56px;
+
+    line-height: 0.98;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 25px;
+}
+
+
+.intro p {
+    color: #e2ded7;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+
+    margin-bottom: 30px;
+}
+
+
+.enter-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 16px 25px;
+
+    background: #f3ede3;
+
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    transition: all 0.3s ease;
+}
+
+.enter-btn span {
+    font-size: 18px;
+}
+
+.enter-btn:hover {
+    background: #ffffff;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.4);
+}
+
+
+.artworks {
+    position: relative;
+
+    z-index: 30;
+
+    width: 57%;
+
+    margin-left: auto;
+
+    margin-right: 5%;
+
+    margin-top: -20px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    padding: 25px;
+
+    align-items: start;
+}
+
+
+.art-card {
+    position: relative;
+
+    background: rgba(8,8,8,0.92);
+
+    border: 1px solid rgba(255,255,255,0.14);
+
+    padding: 10px;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.5);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+
+    animation: cardAppear 1s ease backwards;
+}
+
+.art-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.art-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.art-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.art-card:hover {
+    transform: translateY(-12px);
+
+    box-shadow:
+        0 30px 60px rgba(0,0,0,0.75);
+
+    border-color: rgba(255,255,255,0.35);
+}
+
+
+/* =====================================================
+   ART NUMBER
+===================================================== */
+
+.art-number {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    z-index: 10;
+
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    background: rgba(0,0,0,0.7);
+
+    padding: 6px 8px;
+}
+
+
+/* =====================================================
+   ART IMAGE
+===================================================== */
+
+.art-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 240px;
+
+    overflow: hidden;
+
+    background: #111111;
+}
+
+
+/* =====================================================
+   FLOW ART
+===================================================== */
+
+.flow {
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #777777,
+            #252525 45%,
+            #080808 80%
+        );
+}
+
+
+/* FLOW SHAPES */
+
+.shape {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(1px);
+
+    transition: all 0.5s ease;
+}
+
+.shape-one {
+    width: 130px;
+    height: 190px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eeeeee,
+            #555555
+        );
+
+    left: 28%;
+    top: 15%;
+
+    transform: rotate(25deg);
+}
+
+.shape-two {
+    width: 75px;
+    height: 150px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #bbbbbb,
+            #333333
+        );
+
+    left: 48%;
+    top: 30%;
+
+    transform: rotate(-35deg);
+}
+
+.shape-three {
+    width: 90px;
+    height: 50px;
+
+    background: #888888;
+
+    left: 15%;
+    top: 65%;
+
+    transform: rotate(-20deg);
+}
+
+.art-card:hover .shape-one {
+    transform:
+        rotate(40deg)
+        translateY(-8px);
+}
+
+.art-card:hover .shape-two {
+    transform:
+        rotate(-50deg)
+        translateX(10px);
+}
+
+
+/* =====================================================
+   ABSTRACT ART
+===================================================== */
+
+.abstract {
+    background:
+        radial-gradient(
+            circle,
+            #555555,
+            #171717 65%,
+            #050505
+        );
+}
+
+
+/* CIRCLE */
+
+.circle {
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    border: 18px solid #dddddd;
+
+    border-radius: 50%;
+
+    left: 30%;
+    top: 25%;
+
+    transition: 0.5s ease;
+}
+
+
+/* LINE */
+
+.line {
+    position: absolute;
+
+    width: 180px;
+    height: 8px;
+
+    background: #eeeeee;
+
+    left: 10%;
+    top: 55%;
+
+    transform: rotate(-35deg);
+
+    transition: 0.5s ease;
+}
+
+
+/* SQUARE */
+
+.square {
+    position: absolute;
+
+    width: 70px;
+    height: 70px;
+
+    background: #777777;
+
+    right: 10%;
+    top: 15%;
+
+    transform: rotate(30deg);
+
+    transition: 0.5s ease;
+}
+
+.art-card:hover .circle {
+    transform: rotate(180deg) scale(1.08);
+}
+
+.art-card:hover .line {
+    transform:
+        rotate(-20deg)
+        translateX(10px);
+}
+
+.art-card:hover .square {
+    transform:
+        rotate(60deg)
+        scale(1.1);
+}
+
+
+/* =====================================================
+   MOTION ART
+===================================================== */
+
+.motion {
+    background:
+        linear-gradient(
+            145deg,
+            #3c3c3c,
+            #070707
+        );
+}
+
+
+/* WAVES */
+
+.wave {
+    position: absolute;
+
+    border: 5px solid #cccccc;
+
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+
+    border-radius: 50%;
+
+    transform: rotate(45deg);
+
+    transition: 0.5s ease;
+}
+
+.wave-one {
+    width: 120px;
+    height: 120px;
+
+    left: 20%;
+    top: 20%;
+}
+
+.wave-two {
+    width: 170px;
+    height: 170px;
+
+    left: 5%;
+    top: 5%;
+
+    opacity: 0.6;
+}
+
+.wave-three {
+    width: 220px;
+    height: 220px;
+
+    left: -10%;
+    top: -10%;
+
+    opacity: 0.3;
+}
+
+.art-card:hover .wave-one {
+    transform:
+        rotate(120deg)
+        scale(1.1);
+}
+
+
+/* =====================================================
+   ART INFORMATION
+===================================================== */
+
+.art-info {
+    padding: 18px 10px 12px;
+}
+
+
+.art-info h2 {
+    color: #ffffff;
+
+    font-family: Georgia, serif;
+
+    font-size: 23px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+
+.art-info p {
+    color: #c8c8c8;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    min-height: 58px;
+}
+
+
+/* =====================================================
+   ART BUTTON
+===================================================== */
+
+.art-info button {
+    margin-top: 15px;
+
+    padding: 9px 13px;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    border: 1px solid #888888;
+
+    cursor: pointer;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s ease;
+}
+
+.art-info button:hover {
+    background: #ffffff;
+
+    color: #111111;
+
+    border-color: #ffffff;
+}
+
+
+/* =====================================================
+   SCULPTURE SECTION
+===================================================== */
+
+.sculpture-section {
+    position: relative;
+
+    padding: 120px 8%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #080808,
+            #151515
+        );
+
+    text-align: center;
+}
+
+
+.section-label {
+    color: #d9bd82;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+}
+
+
+.sculpture-section h2,
+.about-section h2 {
+    margin-top: 18px;
+
+    color: #ffffff;
+
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+}
+
+
+.sculpture-section p,
+.about-section p {
+    max-width: 600px;
+
+    margin: 20px auto 0;
+
+    color: #aaaaaa;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about-section {
+    padding: 120px 8%;
+
+    background: #050505;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background: #020202;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+footer p {
+    color: #777777;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .intro {
+        width: 380px;
+
+        margin-left: 5%;
+    }
+
+    .intro h1 {
+        font-size: 48px;
+    }
+
+    .artworks {
+        width: 60%;
+
+        gap: 12px;
+
+        margin-right: 3%;
+    }
+
+    .art-image {
+        height: 210px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    header {
+        height: auto;
+
+        padding: 22px 25px;
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    nav {
+        gap: 18px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+
+    .hero {
+        padding-top: 125px;
+
+        min-height: auto;
+
+        padding-bottom: 80px;
+    }
+
+
+    .intro {
+        width: 88%;
+
+        margin: 20px auto 40px;
+
+        padding: 30px 25px;
+    }
+
+
+    .intro h1 {
+        font-size: 42px;
+    }
+
+
+    .intro p {
+        font-size: 14px;
+    }
+
+
+    .artworks {
+        width: 88%;
+
+        margin: 0 auto;
+
+        padding: 0;
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .art-image {
+        height: 300px;
+    }
+
+
+    .room-bg {
+        inset: 125px 0 0 0;
+    }
+
+
+    .back-wall {
+        width: 85%;
+
+        left: 7.5%;
+    }
+
+
+    .left-wall,
+    .right-wall {
+        opacity: 0.3;
+    }
+
+
+    .sculpture-section h2,
+    .about-section h2 {
+        font-size: 34px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONE
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .logo {
+        font-size: 15px;
+
+        letter-spacing: 3px;
+    }
+
+    .intro h1 {
+        font-size: 36px;
+    }
+
+    .small-title {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+    .intro {
+        padding: 25px 20px;
+    }
+
+    .art-image {
+        height: 260px;
+    }
+
+}

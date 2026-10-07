@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Sculpture Exhibit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    
+    <header>
+        <div class="logo">SCULPTURE EXHIBIT</div>
+        <nav class="menu">
+            <a href="#">EXHIBIT</a>
+            <a href="#">SCULPTURES</a>
+            <a href="#">ABOUT</a>
+        </nav>
+    </header>
+
+    <main class="gallery">
+
+        
+        <section class="intro text">
+            <p class="small">MODERN VIRTUAL GALLERY</p>
+            <h1>An exhibition<br>in motion.</h1>
+            <p class="description">
+                Explore the stories, emotions, and ideas behind each piece. 
+                Every sculpture is a moment frozen in time.
+            </p>
+            <button class="button" onclick="enterGallery()">ENTER EXHIBIT →</button>
+        </section>
+
+       
+        <section class="exhibit">
+            <div class="room">
+
+                <!-- LEFT WALL -->
+                <div class="wall left-wall">
+                    <div class="art art1">
+                        <img src="assets/paint.webp" alt="Artwork 1">
+                    </div>
+                </div>
+
+               
+                <div class="wall back-wall">
+                    
+                    
+                    <div class="art art2">
+                        <img src="assets/abs.jpgs" alt="Flow Artwork">
+                        <button class="info-btn" onclick="showArt()">i</button>
+                        
+                        <div class="art-insight" id="artInfo">
+                            <h2>ABSTRACT ART</h2>
+                            <p><b>"Flow"</b></p>
+                            <p>This artwork represents the constant flow of life, change, movement, and creativity.</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="sculpture-area">
+                        <div class="sculpture">
+                            <div class="head"></div>
+                            <div class="body"></div>
+                            
+                            <button class="info-btn" onclick="showSculpture()">i</button>
+
+                            <div class="insight" id="sculptureInfo">
+                                <h2>SCULPTURE</h2>
+                                <p><b>"Reflection"</b></p>
+                                <p>This sculpture represents the inner self. It reminds us that everyone carries thoughts, feelings, and stories within.</p>
+                            </div>
+                        </div>
+                        <div class="base"></div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT WALL -->
+                <div class="wall right-wall"></div>
+
+                <!-- FLOOR & CEILING -->
+                <div class="floor"></div>
+                <div class="ceiling"></div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2026 Virtual Sculpture Gallery
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+    <script>
+        function enterGallery() {
+            alert("Welcome to the Sculpture Exhibit!");
+        }
+
+        function showSculpture() {
+            const info = document.getElementById("sculptureInfo");
+            info.classList.toggle("active");
+        }
+
+        function showArt() {
+            const info = document.getElementById("artInfo");
+            info.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

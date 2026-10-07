@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Virtual Sculpture Exhibit</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            VIRTUAL SCULPTURE
+        </div>
+
+        <nav>
+            <a href="#home">HOME</a>
+            <a href="#exhibit">EXHIBIT</a>
+            <a href="#sculptures">SCULPTURES</a>
+            <a href="#about">ABOUT</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO / HOME ================= -->
+
+    <main id="home">
+
+        <section class="hero">
+
+            <!-- Background room -->
+
+            <div class="room-bg">
+
+                <div class="back-wall"></div>
+                <div class="left-wall"></div>
+                <div class="right-wall"></div>
+
+                <div class="floor"></div>
+
+            </div>
+
+
+            <!-- ================= INTRO ================= -->
+
+            <div class="intro">
+
+                <span class="small-title">
+                    MODERN VIRTUAL GALLERY
+                </span>
+
+                <h1>
+                    An exhibition
+                    <br>
+                    in motion.
+                </h1>
+
+                <p>
+                    Explore the stories, emotions, and ideas
+                    behind each piece. Every sculpture is a
+                    moment frozen in time.
+                </p>
+
+                <a href="#exhibit" class="enter-btn">
+                    ENTER EXHIBIT
+                    <span>→</span>
+                </a>
+
+            </div>
+
+
+            <!-- ================= ARTWORKS ================= -->
+
+            <section class="artworks" id="exhibit">
+
+                <!-- ARTWORK 1 -->
+
+                <article class="art-card">
+
+                    <div class="art-number">
+                        01
+                    </div>
+
+                    <div class="art-image flow">
+                        <div class="shape shape-one"></div>
+                        <div class="shape shape-two"></div>
+                        <div class="shape shape-three"></div>
+                    </div>
+
+                    <div class="art-info">
+
+                        <h2>FLOW</h2>
+
+                        <p>
+                            A sculpture inspired by movement,
+                            change, and the continuous flow
+                            of life.
+                        </p>
+
+                        <button>
+                            VIEW ARTWORK
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ARTWORK 2 -->
+
+                <article class="art-card">
+
+                    <div class="art-number">
+                        02
+                    </div>
+
+                    <div class="art-image abstract">
+
+                        <div class="circle"></div>
+                        <div class="line"></div>
+                        <div class="square"></div>
+
+                    </div>
+
+                    <div class="art-info">
+
+                        <h2>ABSTRACT</h2>
+
+                        <p>
+                            An exploration of imagination,
+                            creativity, form, and expression.
+                        </p>
+
+                        <button>
+                            VIEW ARTWORK
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ARTWORK 3 -->
+
+                <article class="art-card">
+
+                    <div class="art-number">
+                        03
+                    </div>
+
+                    <div class="art-image motion">
+
+                        <div class="wave wave-one"></div>
+                        <div class="wave wave-two"></div>
+                        <div class="wave wave-three"></div>
+
+                    </div>
+
+                    <div class="art-info">
+
+                        <h2>MOTION</h2>
+
+                        <p>
+                            A visual representation of energy,
+                            movement, and transformation.
+                        </p>
+
+                        <button>
+                            VIEW ARTWORK
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </section>
+
+
+        <!-- ================= SCULPTURES ================= -->
+
+        <section class="sculpture-section" id="sculptures">
+
+            <span class="section-label">
+                THE COLLECTION
+            </span>
+
+            <h2>
+                Sculptures that tell a story.
+            </h2>
+
+            <p>
+                Discover different forms, ideas, and
+                artistic expressions inside our virtual
+                exhibition.
+            </p>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="about-section" id="about">
+
+            <span class="section-label">
+                ABOUT THE EXHIBIT
+            </span>
+
+            <h2>
+                Art. Space. Imagination.
+            </h2>
+
+            <p>
+                Virtual Sculpture is an interactive
+                digital gallery created to present
+                sculptures in a modern virtual space.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Virtual Sculpture Exhibit
+        </p>
+
+    </footer>
+
+</body>
+</html>

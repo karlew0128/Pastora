@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>PASTORA</title>
-  <link rel="stylesheet" href="exhibit.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -17,7 +17,84 @@
     <nav class="menu">
       <a href="index.html">Home</a>
       <a href="exhibit.html">Exhibit</a>
-      <a href="timeline.html">Timeline</a>
       <a href="about.html">About</a>
     </nav>
   </header>
+
+<section class="exhibit-top">
+
+    <div class="exhibit-content">
+      <h1>Welcome</h1>
+        <h2>to our Pastora exhibit</h2>
+        <p>Take time to explore to our historical collection from Luzon to Visayas and uncover what it's made of and when it was discover
+        </p>
+
+
+    </div>
+</section>
+
+<section class="collection-container">
+
+<nav class="region-filter" aria-label="Filter exhibits by region">
+  <button type="button" data-filter="all" aria-pressed="true">All regions</button>
+  <button type="button" data-filter="luzon" aria-pressed="false">Luzon</button>
+  <button type="button" data-filter="visayas" aria-pressed="false">Visayas</button>
+  <button type="button" data-filter="mindanao" aria-pressed="false">Mindanao</button>
+</nav>
+ 
+<div class="table-card" data-region="luzon">
+  <a href="manunggul-jar.html" class="card-image">
+    <img src="assets/c:\Users\Acer\OneDrive\PASTORA\assets\Laguna Copperplate Inscription.jpe " alt="Manunggul Jar">
+  </a>
+  <div class="card-content">
+    <h2>Manunggul Jar</h2>
+    <p>A Late Neolithic burial jar from Palawan, known for the two figures on its lid sailing the soul to the afterlife.</p>
+  </div>
+</div>
+
+<div class="table-card" data-region="visayas">
+  <a href="santo-nino.html" class="card-image">
+    <img src="assets/visayas.jpg" alt="Santo Niño de Cebu">
+  </a>
+  <div class="card-content">
+    <h2>Santo Niño de Cebu</h2>
+    <p>A religious image brought to Cebu in 1521, considered the oldest Christian relic in the Philippines.</p>
+  </div>
+</div>
+
+<div class="table-card" data-region="mindanao">
+  <a href="maitum-jars.html" class="card-image">
+    <img src="assets/mindanao.jpg" alt="Maitum burial jar">
+  </a>
+  <div class="card-content">
+    <h2>Maitum Burial Jars</h2>
+    <p>Anthropomorphic burial jars from Maitum, Sarangani, shaped with human faces and used in secondary burial rituals.</p>
+  </div>
+</div>
+
+<footer class="footer">
+    <p>PASTORA — Philippine Cultural Heritage</p>
+      <p>© 2026 PASTORA</p>
+    <a href="about.html">About</a>
+</footer>
+
+<script>
+  const filterButtons = document.querySelectorAll('.region-filter button');
+  const exhibitCards = document.querySelectorAll('.table-card[data-region]');
+
+  filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const selectedRegion = button.dataset.filter;
+
+      filterButtons.forEach((item) => {
+        item.setAttribute('aria-pressed', String(item === button));
+      });
+
+      exhibitCards.forEach((card) => {
+        card.hidden = selectedRegion !== 'all' && card.dataset.region !== selectedRegion;
+      });
+    });
+  });
+</script>
+
+

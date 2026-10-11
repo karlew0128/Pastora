@@ -7,8 +7,10 @@
 
   <title>PASTORA</title>
   <link rel="stylesheet" href="style.css">
-</head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
 
+</head>
 <body>
 
   <header class="topbar">
@@ -23,6 +25,12 @@
 
 <section class="exhibit-top">
 
+  <video class="exhibit-video" autoplay muted loop playsinline>
+    <source src="https://www.pexels.com/download/video/10267830/" type="video/mp4">
+    Your browser does not support background video.
+  </video>
+      <div class="exhibit-overlay"></div>
+
     <div class="exhibit-content">
       <h1>Welcome</h1>
         <h2>to our Pastora exhibit</h2>
@@ -36,29 +44,139 @@
 <section class="collection-container">
 
 <nav class="region-filter" aria-label="Filter exhibits by region">
-  <button type="button" data-filter="all" aria-pressed="true">All regions</button>
+  <button type="button" data-filter="all" aria-pressed="true">All</button>
   <button type="button" data-filter="luzon" aria-pressed="false">Luzon</button>
   <button type="button" data-filter="visayas" aria-pressed="false">Visayas</button>
   <button type="button" data-filter="mindanao" aria-pressed="false">Mindanao</button>
 </nav>
  
 <div class="table-card" data-region="luzon">
-  <a href="manunggul-jar.html" class="card-image">
-    <img src="assets/c:\Users\Acer\OneDrive\PASTORA\assets\Laguna Copperplate Inscription.jpe " alt="Manunggul Jar">
+  <a href="manunggul" class="card-image">
+    <img src="assets/Artifacts in the Philippines_ 17 Most Intense Archaeological Discoveries - FilipiKnow.jpe " alt="Manunggul Jar">
   </a>
   <div class="card-content">
-    <h2>Manunggul Jar</h2>
+    <h2>3 Manunggul Jar</h2>
     <p>A Late Neolithic burial jar from Palawan, known for the two figures on its lid sailing the soul to the afterlife.</p>
+  </div>
+</div>
+
+<div class="table-card" data-region="luzon">
+  <a href="kabayan-mummies" class="card-image">
+    <img src="assets/kabayan-mummies.jpg" alt="Kabayan Mummies">
+  </a>
+  <div class="card-content">
+    <h2>Kabayan Mummies</h2>
+    <p><strong>Location:</strong> Benguet, Cordillera, Luzon</p>
+    <p>Ancient mummified remains associated with the burial traditions of the Ibaloi people. The caves preserve important evidence of indigenous funerary practices.</p>
+  </div>
+</div>
+
+<div class="table-card" data-region="luzon">
+  <a href="angono-petroglyphs" class="card-image">
+    <img src="assets/angono-petroglyphs.jpg" alt="Angono Petroglyphs">
+  </a>
+  <div class="card-content">
+    <h2>Angono Petroglyphs</h2>
+    <p><strong>Location:</strong> Rizal, Luzon</p>
+    <p>Prehistoric rock engravings depicting human and animal-like figures. They are recognized as one of the most important examples of ancient Philippine rock art.</p>
+  </div>
+</div>
+
+<div class="table-card" data-region="luzon">
+  <a href="laguna-copperplate" class="card-image">
+    <img src="assets/laguna-copperplate.jpg" alt="Laguna Copperplate Inscription">
+  </a>
+  <div class="card-content">
+    <h2>Laguna Copperplate Inscription</h2>
+    <p><strong>Location:</strong> Laguna, Luzon</p>
+    <p>A copper plate bearing an inscription dated to 900 CE. It provides valuable evidence of early Philippine writing, trade, and political connections.</p>
+  </div>
+</div>
+
+<div class="table-card" data-region="luzon">
+  <a href="calatagan-ritual-pot" class="card-image">
+    <img src="assets/calatagan-ritual-pot.jpg" alt="Calatagan Ritual Pot">
+  </a>
+  <div class="card-content">
+    <h2>Calatagan Ritual Pot</h2>
+    <p><strong>Location:</strong> Batangas, Luzon</p>
+    <p>An archaeological pottery artifact associated with precolonial ritual practices. It helps researchers understand the beliefs and craftsmanship of early communities.</p>
+  </div>
+</div>
+
+<div class="table-card" data-region="luzon">
+  <a href="batangas-likha" class="card-image">
+    <img src="assets/batangas-likha.jpg" alt="Batangas Likha Figurines">
+  </a>
+  <div class="card-content">
+    <h2>Batangas Likha Figurines</h2>
+    <p><strong>Location:</strong> Batangas, Luzon</p>
+    <p>Small figurative objects included in Philippine archaeological collections. They offer insights into the artistic expression and cultural practices of earlier communities.</p>
   </div>
 </div>
 
 <div class="table-card" data-region="visayas">
   <a href="santo-nino.html" class="card-image">
-    <img src="assets/visayas.jpg" alt="Santo Niño de Cebu">
+    <img src="assets/How A Baby Jesus Doll Converted The Philippines To Catholicism.jpe" alt="Santo Niño de Cebu">
   </a>
   <div class="card-content">
     <h2>Santo Niño de Cebu</h2>
     <p>A religious image brought to Cebu in 1521, considered the oldest Christian relic in the Philippines.</p>
+  </div>
+</div>
+
+<div class="table-card" data-region="visayas">
+  <a href="oton-death-mask" class="card-image">
+    <img src="assets/oton-death-mask.jpg" alt="Oton Death Mask">
+  </a>
+  <div class="card-content">
+    <h2>Oton Death Mask</h2>
+    <p><strong>Location:</strong> Oton, Iloilo, Panay Island</p>
+    <p>A gold funerary ornament associated with ancient burial customs. The mask includes a gold nose piece and eye coverings.</p>
+  </div>
+</div>
+
+<div class="table-card" data-region="visayas">
+  <a href="banton-cloth" class="card-image">
+    <img src="assets/banton-cloth.jpg" alt="Banton Burial Cloth">
+  </a>
+  <div class="card-content">
+    <h2>Banton Burial Cloth</h2>
+    <p><strong>Location:</strong> Banton Island, Romblon</p>
+    <p>An early textile woven from abaca fibers using the ikat technique. It demonstrates the sophisticated weaving traditions of precolonial communities.</p>
+  </div>
+</div>
+
+<div class="table-card" data-region="visayas">
+  <a href="banton-coffin" class="card-image">
+    <img src="assets/banton-coffin.jpg" alt="Banton Wooden Coffin">
+  </a>
+  <div class="card-content">
+    <h2>Banton Wooden Coffin</h2>
+    <p><strong>Location:</strong> Banton Island, Romblon</p>
+    <p>An elaborately carved wooden burial container associated with ancient mortuary practices. It provides evidence of traditional woodworking and burial customs.</p>
+  </div>
+</div>
+
+<div class="table-card" data-region="visayas">
+  <a href="bacong-burial-vessel" class="card-image">
+    <img src="assets/bacong-burial-vessel.jpg" alt="Bacong Burial Vessel">
+  </a>
+  <div class="card-content">
+    <h2>Bacong Burial Vessel</h2>
+    <p><strong>Location:</strong> Bacong, Negros Oriental</p>
+    <p>An earthenware burial container used for primary burial. It represents the variety of funerary pottery found in the Visayas.</p>
+  </div>
+</div>
+
+<div class="table-card" data-region="visayas">
+  <a href="majarlica-ceramics" class="card-image">
+    <img src="assets/majarlica-ceramics.jpg" alt="Historic Visayan Ceramics">
+  </a>
+  <div class="card-content">
+    <h2>Historic Trade Ceramics</h2>
+    <p><strong>Location:</strong> Various archaeological sites in the Visayas</p>
+    <p>Imported and locally recovered ceramic vessels that provide evidence of historic maritime trade and cultural exchanges across island communities.</p>
   </div>
 </div>
 
@@ -72,29 +190,93 @@
   </div>
 </div>
 
+<div class="table-card" data-region="mindanao">
+  <a href="butuan-balanghai" class="card-image">
+    <img src="assets/butuan-balanghai.jpg" alt="Butuan Balangay Boat">
+  </a>
+  <div class="card-content">
+    <h2>Butuan Balangay Boat</h2>
+    <p><strong>Location:</strong> Butuan City, Agusan del Norte</p>
+    <p>An ancient wooden plank-built boat that demonstrates the maritime technology and seafaring skills of early Philippine communities.</p>
+  </div>
+</div>
+
+<div class="table-card" data-region="mindanao">
+  <a href="agusan-gold-image" class="card-image">
+    <img src="assets/agusan-gold-image.jpg" alt="Agusan Gold Image">
+  </a>
+  <div class="card-content">
+    <h2>Agusan Gold Image</h2>
+    <p><strong>Location:</strong> Agusan region, Mindanao</p>
+    <p>A small gold figure often discussed in connection with precolonial Philippine goldworking and religious imagery. Its exact interpretation remains debated.</p>
+  </div>
+</div>
+
+<div class="table-card" data-region="mindanao">
+  <a href="butuan-paleograph" class="card-image">
+    <img src="assets/butuan-paleograph.jpg" alt="Butuan Paleograph">
+  </a>
+  <div class="card-content">
+    <h2>Butuan Paleograph</h2>
+    <p><strong>Location:</strong> Butuan, Agusan del Norte</p>
+    <p>An early writing-related cultural artifact associated with the historical heritage of Butuan and its connections with other Southeast Asian communities.</p>
+  </div>
+</div>
+
+<div class="table-card" data-region="mindanao">
+  <a href="surigao-gold-ornaments" class="card-image">
+    <img src="assets/surigao-gold-ornaments.jpg" alt="Precolonial Gold Ornaments">
+  </a>
+  <div class="card-content">
+    <h2>Precolonial Gold Ornaments</h2>
+    <p><strong>Location:</strong> Surigao, northeastern Mindanao</p>
+    <p>Gold ornaments recovered from archaeological contexts demonstrate the skill of early goldsmiths and the importance of gold in precolonial society.</p>
+  </div>
+</div>
+
+<div class="table-card" data-region="mindanao">
+  <a href="kulaman-limestone-urn" class="card-image">
+    <img src="assets/kulaman-limestone-urn.jpg" alt="Kulaman Limestone Burial Urn">
+  </a>
+  <div class="card-content">
+    <h2>Kulaman Limestone Burial Urns</h2>
+    <p><strong>Location:</strong> Kulaman Plateau, Sultan Kudarat</p>
+    <p>Limestone burial containers documented in Philippine archaeological collections. They reflect the diverse mortuary traditions of communities in Mindanao.</p>
+  </div>
+</div>
+
 <footer class="footer">
     <p>PASTORA — Philippine Cultural Heritage</p>
       <p>© 2026 PASTORA</p>
     <a href="about.html">About</a>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   const filterButtons = document.querySelectorAll('.region-filter button');
   const exhibitCards = document.querySelectorAll('.table-card[data-region]');
 
+  const updateFilterState = (selectedButton) => {
+    filterButtons.forEach((button) => {
+      const isActive = button === selectedButton;
+      button.setAttribute('aria-pressed', String(isActive));
+      button.classList.toggle('active', isActive);
+    });
+  };
+
   filterButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const selectedRegion = button.dataset.filter;
-
-      filterButtons.forEach((item) => {
-        item.setAttribute('aria-pressed', String(item === button));
-      });
+      updateFilterState(button);
 
       exhibitCards.forEach((card) => {
-        card.hidden = selectedRegion !== 'all' && card.dataset.region !== selectedRegion;
+        const isVisible = selectedRegion === 'all' || card.dataset.region === selectedRegion;
+        card.hidden = !isVisible;
       });
     });
   });
+
+  updateFilterState(document.querySelector('.region-filter button[data-filter="all"]'));
 </script>
 
 
